@@ -1,0 +1,45 @@
+{"model":["lgb"],
+    "model_params": {
+       "lgb": {
+           "boosting_type": "gbdt",
+           "objective": "regression",
+           "metric": "rmse",
+           "learning_rate": 0.01,
+           "num_leaves": 1024,
+           "max_depth":7,
+           "min_data_in_leaf":20,
+           "bagging_fraction" : 0.6,
+           "feature_fraction" : 0.4,
+           "bagging_seed" : 1103,
+           "verbosity": -1,
+           "subsample":0.7,
+           "lambda_l1":20,
+           "lambda_l2":20,
+           "seed":1103
+       },
+       "xgb":{
+           "objective": "reg:linear", 
+           "eval_metric": "rmse",
+           "eta":0.01,
+           "max_depth":4,
+
+           "min_data_in_leaf":55,
+           "bagging_fraction":0.5,
+           "feature_fraction":0.3,
+
+           "lambda_l1":0,
+           "lambda_l2":0,
+           "min_child_weight:":20,
+           "subsample":0.7,
+           "random_state": 1103, 
+           "silent": 1,
+           "seed":1103
+          },
+        "cat":{
+            "loss_function": "RMSE",
+            "num_boost_round": 5000,
+            "early_stopping_rounds": 100,
+            "raondom_state":1103
+        }
+       },
+    "features": ["SumZeros", "SumNeg", "col2", "col3", "col4", "col7", "col8", "col9", "col12", "col15", "col16", "col22", "col23", "col33", "col35", "col44", "col46", "col48", "col51", "col55", "col56", "col63", "col64", "col67", "col68", "col69", "col70", "col71", "col72", "col81", "col85", "col87", "col88", "col89", "col95", "col97", "col99", "col101", "col102", "col104", "col106", "col107", "col111", "col112", "col113", "col115", "col117", "col118", "col119", "col120", "col121", "col124", "col125", "col127", "col130", "col131", "col136", "col143", "col146", "col147", "col148", "col151", "col153", "col160", "col161", "col162", "col166", "col170", "col176", "col177", "col179", "col193", "col201", "col207", "col208", "col209", "col211", "col215", "col218", "col220", "col225", "col226", "col228", "col232", "col237", "col239", "col240", "col241", "col244", "col247", "col248", "col253", "col255", "col257", "col268", "col269", "col271", "col272", "col277", "col279", "col280", "col290", "col296", "col299", "col300", "col302", "col305", "col306", "col307", "col309", "col310", "col311", "col313", "col316", "col318", "col319", "col321", "col329", "col335", "col336", "col337", "col342", "col343", "col344", "col345", "col346", "col347", "col350", "col358", "col359", "col363", "col368", "col381", "col382", "col394", "col395", "col398", "col401", "col403", "col404", "col411", "col417", "col418", "col428", "col433", "col438", "col441", "col442", "col445", "col450", "col453", "col455", "col458", "col459", "col462", "col463", "col467", "col469", "col470", "col471", "col472", "col480", "col485", "col493", "col496", "col498", "col500", "col502", "col516", "col522", "col524", "col529", "col530", "col533", "col540", "col545", "col552", "col553", "col554", "col558", "col567", "col571", "col577", "col586", "col591", "col592", "col594", "col595", "col596", "col598", "col611", "col617", "col620", "col622", "col624", "col625", "col628", "col629", "col635", "col636", "col638", "col652", "col653", "col668", "col674", "col679", "col680", "col681", "col683", "col684", "col690", "col707", "col713", "col723", "col743", "col744", "col745", "col750", "col751", "col754", "col762", "col767", "col768", "col769", "col770", "col777", "col782", "col789", "col791", "col793", "col797", "col803", "col808", "col816", "col820", "col821", "col826", "col830", "col831", "col836", "col843", "col847", "col850", "col851", "col854", "col867", "col868", "col870", "col871", "col879", "col881", "col899", "col900", "col902", "col912", "col913", "col914", "col918", "col922", "col924", "col925", "col929", "col938", "col945", "col948", "col950", "col953", "col957", "col965", "col971", "col972", "col977", "col978", "col982", "col985", "col993", "col1005", "col1009", "col1011", "col1013", "col1015", "col1025", "col1032", "col1033", "col1036", "col1048", "col1050", "col1051", "col1053", "col1062", "col1074", "col1081", "col1087", "col1088", "col1092", "col1094", "col1096", "col1099", "col1110", "col1122", "col1127", "col1130", "col1132", "col1135", "col1138", "col1139", "col1142", "col1143", "col1149", "col1154", "col1156", "col1158", "col1160", "col1161", "col1164", "col1171", "col1174", "col1180", "col1183", "col1186", "col1188", "col1193", "col1202", "col1204", "col1212", "col1213", "col1216", "col1222", "col1223", "col1225", "col1231", "col1242", "col1246", "col1252", "col1254", "col1256", "col1261", "col1268", "col1278", "col1280", "col1298", "col1306", "col1321", "col1323", "col1337", "col1342", "col1345", "col1352", "col1359", "col1371", "col1376", "col1382", "col1383", "col1407", "col1413", "col1414", "col1417", "col1443", "col1455", "col1459", "col1473", "col1480", "col1482", "col1491", "col1501", "col1506", "col1510", "col1515", "col1526", "col1532", "col1541", "col1545", "col1549", "col1555", "col1556", "col1557", "col1563", "col1566", "col1572", "col1575", "col1587", "col1600", "col1608", "col1610", "col1621", "col1632", "col1641", "col1655", "col1673", "col1675", "col1683", "col1693", "col1698", "col1699", "col1706", "col1711", "col1715", "col1719", "col1722", "col1728", "col1732", "col1738", "col1749", "col1754", "col1757", "col1759", "col1770", "col1778", "col1779", "col1780", "col1781", "col1787", "col1792", "col1796", "col1800", "col1801", "col1811", "col1830", "col1838", "col1849", "col1889", "col1907", "col1923", "col1931", "col1938", "col1941", "col1948", "col1957", "col1964", "col1970", "col2000", "col2007", "col2032", "col2052", "col2060", "col2077", "col2081", "col2094", "col2096", "col2109", "col2127", "col2138", "col2142", "col2146", "col2157", "col2174", "col2188", "col2204", "col2213", "col2218", "col2219", "col2223", "col2226", "col2230", "col2242", "col2243", "col2250", "col2258", "col2260", "col2268", "col2270", "col2297", "col2298", "col2301", "col2304", "col2306", "col2324", "col2333", "col2337", "col2340", "col2344", "col2349", "col2352", "col2365", "col2366", "col2372", "col2391", "col2393", "col2398", "col2402", "col2405", "col2408", "col2418", "col2433", "col2442", "col2446", "col2460", "col2466", "col2469", "col2470", "col2486", "col2494", "col2500", "col2501", "col2525", "col2537", "col2542", "col2544", "col2560", "col2565", "col2571", "col2607", "col2614", "col2616", "col2619", "col2621", "col2630", "col2640", "col2646", "col2663", "col2687", "col2704", "col2705", "col2713", "col2725", "col2735", "col2749", "col2760", "col2766", "col2772", "col2785", "col2787", "col2789", "col2793", "col2803", "col2807", "col2810", "col2834", "col2839", "col2841", "col2850", "col2852", "col2855", "col2856", "col2857", "col2859", "col2870", "col2872", "col2878", "col2880", "col2895", "col2906", "col2913", "col2921", "col2926", "col2939", "col2940", "col2947", "col2956", "col2958", "col2963", "col2968", "col2974", "col2977", "col2986", "col2989", "col2990", "col2998", "col3005", "col3012", "col3035", "col3039", "col3063", "col3065", "col3093", "col3094", "col3095", "col3106", "col3107", "col3110", "col3114", "col3116", "col3123", "col3149", "col3164", "col3180", "col3184", "col3185", "col3194", "col3216", "col3219", "col3222", "col3223", "col3253", "col3259", "col3272", "col3275", "col3284", "col3290", "col3294", "col3300", "col3304", "col3308", "col3311", "col3321", "col3336", "col3340", "col3344", "col3353", "col3358", "col3364", "col3366", "col3368", "col3377", "col3379", "col3382", "col3383", "col3395", "col3423", "col3440", "col3450", "col3451", "col3469", "col3479", "col3480", "col3483", "col3493", "col3497", "col3498", "col3513", "col3541", "col3575", "col3588", "col3589", "col3590", "col3619", "col3646", "col3653", "col3660", "col3669", "col3674", "col3683", "col3703", "col3718", "col3720", "col3725", "col3728", "col3736", "col3748", "col3757", "col3762", "col3765", "col3788", "col3794", "col3803", "zero_70Mean", "zero_70Max", "min_int"], "target_name": "Score"}

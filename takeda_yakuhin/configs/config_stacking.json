@@ -1,0 +1,33 @@
+{
+    "model_params":{
+        "nn1":{
+           "hidden_layer_sizes": [1],
+           "random_state":1103
+        },
+        "nn2":{
+            "hidden_layer_sizes": [1],
+            "random_state":1103
+        },
+        "rf1":{
+            "criterion":"mse",
+            "n_estimators":1,
+            "random_state":1103
+        },
+        "et1":{
+            "criterion":"mse",
+            "n_estimators":1,
+            "random_state":1103
+        },
+        "lgb1":{
+            "boosting_type": "gbdt",
+            "objective": "regression",
+            "metric": "None",
+            "learning_rate": 0.01,
+            "min_data_in_leaf":55,
+            "bagging_fraction" : 0.6,
+            "feature_fraction" : 0.3,
+            "bagging_seed" : 1103,
+            "verbosity": -1
+        }
+    }
+}
